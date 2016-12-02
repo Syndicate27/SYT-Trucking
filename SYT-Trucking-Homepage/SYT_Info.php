@@ -7,22 +7,27 @@
 
 <body>
 	<?php
-		// Variables for information entered in on the application
-		$company = $_POST["company"]; //Comapny Name
-		$month = $_POST["month"]; //Month Name
-		$day = $_POST["day"]; //day
-		$year = $_POST["year"]; //Year
-		$p_location = $_POST["PickUpLocation"]; //Pick up location of cargo
-		$d_location = $_POST["DropOffLocation"]; //Drop off location of cargo
-		$tnum = $_POST["ticketNumber"]; //Ticket Number
-		$weight = $_POST["tonage"]; //Weight of total cargo delivered
-		
-		
-		
-		
-	
-	
-	
+		class Info {
+          // Adding the proporties (variables)
+          public $company = $_POST["company"]; //Comapny Name
+          public $month = $_POST["month"]; //Month Name
+          public $day = $_POST["day"]; //day
+          public $year = $_POST["year"]; //Year
+          public $p_location = $_POST["PickUpLocation"]; //Pick up location of cargo
+          public $d_location = $_POST["DropOffLocation"]; //Drop off location of cargo
+          public $tnum = $_POST["ticketNumber"]; //Ticket Number
+          public $weight = $_POST["tonage"]; //Weight of total cargo delivered
+
+          public function __construct($company, $month, $day, $year, $PickUpLocation, $DropOffLocation, $tnum, $weight) {
+              $this->company = $company;
+              }
+      
+
+          public function rInfo () {
+            return "You sent to" . this->company . ".";
+            }
+          }
+          echo rInfo ();
 	?>
 
 
