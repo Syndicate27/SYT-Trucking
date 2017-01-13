@@ -1,5 +1,69 @@
 /* !DOCTYPE CSS */
 
 html#layout {
-	background-color: rgba(30,196,220,.8);
+	background-image: url(images/19.jpg);
+	color: white;
+}
+
+fieldset {
+	background-color: rgba(0,0,0,.6);
+	color: white;
+}
+
+
+/* INPUT FORMATTING */
+
+div#trucknumber {
+	margin: 5px;
+	border: 2px dotted red;
+	padding: 0px;
+	height:80px;
+	width: 300px;
+}
+div#company {
+	margin: 5px;
+	border: 2px dotted gold;
+	padding: 0px;
+	height:80px;
+	width: 300px;
+}
+div#date {
+	margin: 5px;
+	border: 2px dotted cyan;
+	padding: 0px;
+	height:150px;
+	width: 400px;
+}
+div#pickup {
+	margin: 5px;
+	border: 2px dotted black;
+	padding: 0px;
+	height:150px;
+	width: 300px;
+}
+div#dropoff {
+	margin: 5px;
+	border: 2px dotted white;
+	padding: 0px;
+	height:150px;
+	width: 300px;
+}
+div#ticketnumber {
+	margin: 5px;
+	border: 2px dotted red;
+	padding: 0px;
+	height:70px;
+	width: 300px;
+}
+div#weight {
+	margin: 5px;
+	border: 2px dotted red;
+	padding: 0px;
+	height:70px;
+	width: 300px;
+}
+div#submitbutton {
+	margin: 5px;
+	border: 2px dotted red;
+	padding: 0px;
 }

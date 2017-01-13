@@ -4,8 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="SYT Trucking" content="Ticket Submission"> 
 		<link rel="stylesheet" href="SYT_Home.css">
+		<link rel="php" href="syt_dbh.php">
 		<title>SYT Trucking | HomePage</title>
 	</head>
+
 
 	<body>
 		<!-- Begin Form Section-->
@@ -14,63 +16,82 @@
 			<legend id="form_title"><h2>SYT Trucking Ticket Submission</h2></legend>
 				<form id="form_design" action="SYT_Info.php" method="post"> 
 				<!--Truck Number Entry-->
-				<label>Truck Number:<br /><input type="number" name="truckNumber" placeholder="Input Truck Number" required="required"><br><br>
+				<div id="trucknumber">
+				<label>Truck Number:<br /><input type="number" name="truckNumber" placeholder="Input Truck Number" required="required"><br><br></label>
+				</div>
 				<!--Company Selection-->
-				<p>Company: <select name="Company">
-					<option value="Angel Brothers Entreprises">Angel Brothers Entreprises</option>
-					<option value="Bel-Tran Transport">Bel-Tran Transport</option>
-					<option value="Century Asphalt">Century Asphalt</option>
-					<option value="Cherry Crushed Concrete">Cherry Crushed Concrete</option>
-					<option value="Durwood Greene">Durwood Greene</option>
-					<option value="Southern Crushed Concrete">Southern Crushed Concrete</option>
-					<option value="Turf Materials Inc.">Turf Materials Inc.</option>
-					</select></p><br><br>
+				<div id="company">
+					<p>Company: <select name="company">
+						<option value="Angel Brothers Entreprises">Angel Brothers Entreprises</option>
+						<option value="Bel-Tran Transport">Bel-Tran Transport</option>
+						<option value="Century Asphalt">Century Asphalt</option>
+						<option value="Cherry Crushed Concrete">Cherry Crushed Concrete</option>
+						<option value="Durwood Greene">Durwood Greene</option>
+						<option value="Southern Crushed Concrete">Southern Crushed Concrete</option>
+						<option value="Turf Materials Inc.">Turf Materials Inc.</option>
+						</select></p><br><br>
+				</div>
+				<!-- New Date Entry Compatible with Chrome and IE11
+				<p>Date</p>
+				<input type="date" name="date"> 
+				-->
 				<!--Date Entries-->
-				<p>Date</p><br>
-				<!--Month Selection-->
-				<p>Month: <select name="month">
-					<option value="January">January</option>
-					<option value="February">February</option>
-					<option value="March">March</option>
-					<option value="April">April</option>
-					<option value="May">May</option>
-					<option value="June">June</option>
-					<option value="July">July</option>
-					<option value="August">August</option>
-					<option value="September">September</option>
-					<option value="October">October</option>
-					<option value="November">November</option>
-					<option value="December">December</option>
-					</center>
-				</select></p>
-				<!--Day Selection-->
-				<p>Day: <select name="day">
-					<option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option>
-					<option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> <option value="10">10</option>
-					<option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option>
-					<option value="16">16</option> <option value="17">17</option> <option value="18">18</option> <option value="19">19</option> <option value="20">20</option>
-					<option value="21">21</option> <option value="22">22</option> <option value="23">23</option> <option value="24">24</option> <option value="25">25</option>
-					<option value="26">26</option> <option value="27">27</option> <option value="28">28</option> <option value="29">29</option> <option value="30">30</option>
-					<option value="31">31</option>
-				</select></p>
-				<!--Year Selection-->
-				<p>Year: <select name="year">
-					<option value="2016">2016</option> <option value="2017">2017</option> <option value="2018">2018</option> <option value="2019">2019</option> 
-					<option value="2020">2020</option> <option value="2021">2021</option> <option value="2022">2022</option> <option value="2023">2023</option> 
-					<option value="2024">2024</option> <option value="2025">2025</option>
-				</select></p><br><br>
-				<p>Pick-Up Location</p>
-					<textarea name="PickUpLocation" required="required" placeholder="Enter your Pick-Up Location in here...."></textarea>
-				<p>Drop-Off Location</p>
-					<textarea name="DropOffLocation" required="required" placeholder="Enter your Drop-Off Location in here...."></textarea><br /><br />
+				<div id="date">
+					<p>Date</p><br>
+					<!--Month Selection-->
+					<p>Month: <select name="month">
+						<option value="January">January</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+						</center>
+					</select>
+					<!--Day Selection-->
+					Day: <select name="day">
+						<option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option>
+						<option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> <option value="10">10</option>
+						<option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option>
+						<option value="16">16</option> <option value="17">17</option> <option value="18">18</option> <option value="19">19</option> <option value="20">20</option>
+						<option value="21">21</option> <option value="22">22</option> <option value="23">23</option> <option value="24">24</option> <option value="25">25</option>
+						<option value="26">26</option> <option value="27">27</option> <option value="28">28</option> <option value="29">29</option> <option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+					<!--Year Selection-->
+					Year: <select name="year">
+						<option value="2017">2017</option> <option value="2018">2018</option> <option value="2019">2019</option> 
+						<option value="2020">2020</option> <option value="2021">2021</option> <option value="2022">2022</option> <option value="2023">2023</option> 
+						<option value="2024">2024</option> <option value="2025">2025</option>
+					</select></p><br><br>
+				</div>
+				<div id="pickup">
+					<p>Pick-Up Location</p>
+						<textarea name="PickUpLocation" required="required" placeholder="Enter your Pick-Up Location in here...."></textarea>
+				</div>
+				<div id="dropoff">
+					<p>Drop-Off Location</p>
+						<textarea name="DropOffLocation" required="required" placeholder="Enter your Drop-Off Location in here...."></textarea><br /><br />
+				</div>
 				<!--Entry field of Ticket Number-->
-				<label>Ticket Number:<br /><input type="text" name="ticketNumber" placeholder="Input Ticket Number" required="required"><br><br>
+				<div id="ticketnumber">
+					<label>Ticket Number:<br /><input type="text" name="ticketNumber" placeholder="Input Ticket Number" required="required"><br><br></label>
+				</div>
 				<!--Entry field of Tonage (weight)-->
-				<label>Weight (Tons):<br /><input type="number" name="tonage" placeholder="Input Weight in Tons" required="required"><br><br>
+				<div id="weight">
+					<label>Weight (Tons):<br /><input type="number" name="tonage" placeholder="Input Weight in Tons" required="required"><br><br>
+				</div>
+				<div id="submitbutton">
 					<input type="submit" value="Submit">
+				</div>
 				</form>
 		</fieldset>
-
 
 	<footer>
 
