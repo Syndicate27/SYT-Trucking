@@ -7,7 +7,7 @@
 
 <body>
 	<?php
-
+           $trucknum = $_POST["trucknumber"]; //Truck Number
            $company = $_POST["company"]; //Comapny Name
            $month = $_POST["month"]; //Month Name
            $day = $_POST["day"]; //day
@@ -17,9 +17,19 @@
            $tnum = $_POST["ticketNumber"]; //Ticket Number
            $weight = $_POST["tonage"]; //Weight of total cargo delivered
 
-        echo ($company . $month . $day . $year . $p_location . $d_location . $tnum . $weight);
+        echo ("Truck Number: $trucknum <br />  Company Name: $company <br /> Date: $month $day, $year <br />Pick Up Location: $p_location <br /> Drop Off Location: $d_location <br /> Ticket Number: $tnum <br />Tonage:$weight <br />" );
+        //Connection site to Php MyAdmin
        
-           
+       $conn = mysqli_connect('localhost:8080', 'jnji', 'hd37evqy', 'syt trucking'); /*we will enter in 4 parameters*/
+
+          /*if connection fails */
+
+          if(!$conn) {
+
+            die("Connection Failed: " . mysqli_connect_error()); /* kills the connection */
+
+          }
+                   
                   
           
 	?>
