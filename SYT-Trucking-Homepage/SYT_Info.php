@@ -7,7 +7,7 @@
 
 <body>
 	<?php
-           $trucknum = $_POST["trucknumber"]; //Truck Number
+           $trucknum = $_POST["truckNumber"]; //Truck Number
            $company = $_POST["company"]; //Comapny Name
            $month = $_POST["month"]; //Month Name
            $day = $_POST["day"]; //day
