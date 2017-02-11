@@ -1,6 +1,6 @@
 <?php
 
-	$conn = mysqli_connect('localhost:8080', 'jnji', 'hd37evqy', 'shipment_info'); /*we will enter in 4 parameters*/
+	$conn = mysqli_connect('localhost', 'jnji', 'hd37evqy', 'syt trucking'); /*we will enter in 4 parameters*/
 
 	/*if connection fails */
 

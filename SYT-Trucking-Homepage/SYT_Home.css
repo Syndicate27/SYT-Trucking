@@ -21,6 +21,7 @@ div#trucknumber {
 	width: 300px;
 }
 div#company {
+	float: right;
 	margin: 5px;
 	border: 2px dotted gold;
 	padding: 0px;

@@ -1,1 +1,17 @@
-Yep this was just created to create this folder :D
+README
+
+Improvements:
+//-----------------------
+DATE
+
+Improvements should be made to the date because we have thress different variables to upload and get from the user..
+If we use the simple Date method we should be able to runt the script faster
+//-----------------------
+
+//-------------------------------
+SECURITY IMPROVEMENTS
+
+The numerical data entered on our page must be verified for security..
+We also cannot enable special characters to be entered so that we cannot be hacked..
+FOR THIS ...>>> We can use simple if and then else statements to verify if any sepcial characters are entered in 
+

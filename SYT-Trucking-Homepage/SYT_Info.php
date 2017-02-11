@@ -17,6 +17,9 @@
            $tnum = $_POST["ticketNumber"]; //Ticket Number
            $weight = $_POST["tonage"]; //Weight of total cargo delivered
 
+        echo ("<p>The following information has been entered into our database. Please note that if any of this information proves to be faulty it will bot be submitted and you will be notified</p>");
+
+
         echo ("Truck Number: $trucknum <br />  Company Name: $company <br /> Date: $month $day, $year <br />Pick Up Location: $p_location <br /> Drop Off Location: $d_location <br /> Ticket Number: $tnum <br />Tonage:$weight <br />" );
   
 	?>
