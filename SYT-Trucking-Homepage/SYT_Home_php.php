@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	include 'syt_conn.php';
+	//include 'syt_conn.php';
 
 ?>
 <html lang="en-us" id="layout">
@@ -19,7 +19,7 @@
 		<fieldset>
 		<center>
 			<legend id="form_title"><h2>SYT Trucking Ticket Submission</h2></legend>
-				<form id="form_design" action="SYT_Info.php" method="post"> 
+				<form id="form_design" action="SYT_info_insertion.php" method="post"> 
 				<!--Truck Number Entry-->
 				<div id="trucknumber">
 				<label>Truck Number:<br /><input type="number" name="truckNumber" placeholder="Input Truck Number" required="required"><br><br></label>
@@ -97,6 +97,12 @@
 				</div>
 				</form>
 		</fieldset>
+		<?php
+
+			//include "SYT_info_insertion.php";
+
+
+		?>
 
 	<footer>
 
